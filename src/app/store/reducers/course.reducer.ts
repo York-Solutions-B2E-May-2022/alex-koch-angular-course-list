@@ -3,7 +3,7 @@ import { CourseAction, CourseActionType } from '../actions/course.action';
 
 const initialState: Array<CourseItem> = [
   {
-    id: '1',
+    id: 0,
     department: 'Computer Engineering',
     name: 'C++ Programming',
   },
@@ -17,6 +17,9 @@ export function courseReducer(
   switch (action.type) {
     case CourseActionType.ADD_ITEM:
       return [...state, action.payload];
+    case CourseActionType.DELETE_ITEM:
+      // TODO create delete item logic
+      return [...state];
     default:
       return [...state];
   }
